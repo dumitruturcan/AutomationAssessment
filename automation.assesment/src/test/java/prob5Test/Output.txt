@@ -1,0 +1,2 @@
+Sum of Odd Numbers = 8
+Amount of Even Numbers = 2
