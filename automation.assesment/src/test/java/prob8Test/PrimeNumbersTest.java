@@ -3,9 +3,7 @@ package prob8Test;
 import static org.junit.Assert.*;
 import java.io.IOException;
 import java.util.ArrayList;
-
 import org.junit.Test;
-
 import prob08.PrimeNumbers;
 import utilities.TestDataContext;
 import utilities.Validation;
@@ -21,9 +19,13 @@ public class PrimeNumbersTest {
 		
 		int n =ioData.readOneInt();
 		
-		Integer[] primeArray = PrimeNumbers.returnPrimeNumbersArrayUntilN(n);
+		ArrayList<Integer> primeArray = new ArrayList<Integer>();
 		
-		ioData.writeArrayToFileInLine(primeArray);
+		primeArray = PrimeNumbers.returnPrimeNumbersArrayUntilN(n);
+		
+		ioData.writeArrayToFileInLine(primeArray.toArray(new Integer[primeArray.size()]));
+		
+		
 	}
 
 }

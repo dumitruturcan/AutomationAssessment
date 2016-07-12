@@ -14,20 +14,16 @@ public class PIDigitsTest {
 
 	@Test
 	public void test() throws IOException {
-
-		fail("Not yet implemented!");
 		
 		TestDataContext ioData = new TestDataContext(6);
 		
-		assertTrue(Validation.fileNotEmpty(ioData));
+		assertTrue("Input file has no data",Validation.fileNotEmpty(ioData));
 		
 		int nrOfDigits = ioData.readOneInt();
 		
-		String PI = PIDigits.generatePI(nrOfDigits);
+		double PI = PIDigits.generatePI(nrOfDigits);
 		
 		System.out.println(PI);
-		
-		ioData.writeLine(PI);
 		
 	}
 
