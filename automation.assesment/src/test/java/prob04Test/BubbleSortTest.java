@@ -1,4 +1,4 @@
-package prob4Test;
+package prob04Test;
 
 import static org.junit.Assert.assertTrue;
 
@@ -14,7 +14,7 @@ public class BubbleSortTest {
 	@Test
 	public void test() throws IOException {
 
-		TestDataContext ioData = new TestDataContext(4);
+		TestDataContext ioData = new TestDataContext("04");
 
 		assertTrue(Validation.fileNotEmpty(ioData));
 

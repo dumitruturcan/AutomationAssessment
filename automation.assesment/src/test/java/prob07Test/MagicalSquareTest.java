@@ -1,4 +1,4 @@
-package prob7Test;
+package prob07Test;
 
 import static org.junit.Assert.*;
 
@@ -16,7 +16,7 @@ public class MagicalSquareTest {
 	@Test
 	public void test() throws IOException {
 
-		TestDataContext ioData = new TestDataContext(7);
+		TestDataContext ioData = new TestDataContext("07");
 
 		assertTrue("Input.txt has no data",Validation.fileNotEmpty(ioData));
 

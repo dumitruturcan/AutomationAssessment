@@ -1,4 +1,4 @@
-package prob8Test;
+package prob08Test;
 
 import static org.junit.Assert.*;
 import java.io.IOException;
@@ -13,7 +13,7 @@ public class PrimeNumbersTest {
 	@Test
 	public void test() throws IOException {
 		
-		TestDataContext ioData = new TestDataContext(8);
+		TestDataContext ioData = new TestDataContext("08");
 		
 		assertTrue("File has no data !",Validation.fileNotEmpty(ioData));
 		

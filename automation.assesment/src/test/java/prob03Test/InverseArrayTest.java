@@ -1,4 +1,4 @@
-package prob3Test;
+package prob03Test;
 
 import static org.junit.Assert.assertTrue;
 
@@ -16,7 +16,7 @@ public class InverseArrayTest {
 	@Test
 	public void test() throws IOException {
 		
-		TestDataContext ioData = new TestDataContext(3);
+		TestDataContext ioData = new TestDataContext("03");
 		
 		assertTrue(Validation.fileNotEmpty(ioData));
 		

@@ -1,4 +1,4 @@
-package prob9Test;
+package prob09Test;
 
 import static org.junit.Assert.*;
 import java.io.IOException;
@@ -14,15 +14,16 @@ public class FriendlyNumbersTest {
 
 	@Test
 	public void test() throws IOException {
-	
-		
-		TestDataContext ioData = new TestDataContext(9);
-		
-		assertTrue(Validation.fileNotEmpty(ioData));
+
+		TestDataContext ioData = new TestDataContext("09");
+
+		assertTrue("No data in input file", Validation.fileNotEmpty(ioData));
 		
 		int limit = ioData.readOneInt();
-		
-		ArrayList<Integer> pairNumbers  = FriendlyNumbers.returnFriendlyPairs(limit);
+
+		ArrayList<String> friendlyPairNumbers = FriendlyNumbers.returnFriendlyPairs(limit);
+
+		ioData.writeArrayListToFileLineNew(friendlyPairNumbers);
 	}
 
 }

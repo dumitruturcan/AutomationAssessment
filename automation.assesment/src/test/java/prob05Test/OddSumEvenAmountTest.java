@@ -1,4 +1,4 @@
-package prob5Test;
+package prob05Test;
 
 import static org.junit.Assert.*;
 import java.io.IOException;
@@ -13,7 +13,7 @@ public class OddSumEvenAmountTest {
 	@Test
 	public void test() throws IOException {
 	
-		TestDataContext ioData = new TestDataContext(5);
+		TestDataContext ioData = new TestDataContext("05");
 		
 		assertTrue(Validation.fileNotEmpty(ioData));
 		

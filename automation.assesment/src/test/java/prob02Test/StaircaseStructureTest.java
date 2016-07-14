@@ -1,4 +1,4 @@
-package prob2Test;
+package prob02Test;
 
 import static org.junit.Assert.*;
 import java.io.IOException;
@@ -15,9 +15,9 @@ public class StaircaseStructureTest {
 	@Test
 	public void test() throws IOException {
 
-		TestDataContext ioData = new TestDataContext(2);
+		TestDataContext ioData = new TestDataContext("02");
 
-		assertTrue(Validation.fileNotEmpty(ioData));
+		assertTrue("No data in input file",Validation.fileNotEmpty(ioData));
 		
 		Integer nrOfLevels = ioData.readOneInt();
 

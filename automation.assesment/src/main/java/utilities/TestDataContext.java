@@ -13,9 +13,9 @@ public class TestDataContext {
 	private File input;
 	private File output;
 
-	public TestDataContext(int probNumber) throws IOException {
+	public TestDataContext(String probNumber) throws IOException {
 
-		folderPath = "src/test/java/prob" + probNumber + "Test/";
+		folderPath = "src/test/java/prob" + probNumber + "Test/";		
 
 		input = new File(folderPath + "Input.txt");
 		

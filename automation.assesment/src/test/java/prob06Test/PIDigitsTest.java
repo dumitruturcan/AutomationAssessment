@@ -1,4 +1,4 @@
-package prob6Test;
+package prob06Test;
 
 import static org.junit.Assert.*;
 
@@ -15,7 +15,9 @@ public class PIDigitsTest {
 	@Test
 	public void test() throws IOException {
 		
-		TestDataContext ioData = new TestDataContext(6);
+		fail("Solution is not ready");
+		
+		TestDataContext ioData = new TestDataContext("06");
 		
 		assertTrue("Input file has no data",Validation.fileNotEmpty(ioData));
 		
