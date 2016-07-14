@@ -39,6 +39,18 @@ public class TestDataContext {
 		out.close();
 	}
 	
+	public void writeIntegerArrayListToFileLineNew(ArrayList <Integer> array) throws IOException{
+	
+		FileWriter out = new FileWriter(output);
+
+		for (Integer value : array)
+
+			out.write(value + "\n");
+
+		out.close();
+			
+	}
+	
 	public void writeArrayToFileInLine(Object[] array) throws IOException {
 		
 		FileWriter write = new FileWriter(output);

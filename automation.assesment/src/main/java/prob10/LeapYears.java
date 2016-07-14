@@ -10,19 +10,27 @@ public class LeapYears {
 		ArrayList<Integer> leapYearsList = new ArrayList<Integer>();
 		int year = LocalDate.now().getYear() + 1;
 
-		while (nrOfLeapYears > 0) {
-
-			if (isLeapYear(year)){
-
+		System.out.println(nrOfLeapYears);
+		
+		while (nrOfLeapYears > 0){
+		
+			if(isLeapYear(year)){
+				
+				nrOfLeapYears --;	
+				
 				leapYearsList.add(year);
 				
-				nrOfLeapYears --;
-			}
+				year++;
+				
+			} else
+				
+				year++;
 		}
+		
 		return leapYearsList;
 	}
 
-	private static boolean isLeapYear(int year) {
+	public static boolean isLeapYear(int year) {
 
 		if (year % 4 != 0)
 

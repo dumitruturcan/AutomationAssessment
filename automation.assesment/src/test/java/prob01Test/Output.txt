@@ -1,0 +1,7 @@
+ababa - Is Polindrome
+	bcd7 - Not Polindrome
+baba - Not Polindrome
+asdkn4 - Not Polindrome
+maria - Not Polindrome
+the b - Not Polindrome
+   aaa    - Is Polindrome
