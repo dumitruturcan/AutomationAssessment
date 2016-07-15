@@ -17,8 +17,8 @@ public class PolindromeTest extends Polindrome {
 
 		assertTrue("No data in input File",Validation.fileNotEmpty(ioData));
 		
-		@SuppressWarnings("unchecked")
-		ArrayList<String> arrayList = (ArrayList<String>) ioData.readLineArrayList();
+		
+		ArrayList<String> arrayList = ioData.readLineArrayList();
 
 		arrayList = findPolindromesFromArrayList(arrayList);
 

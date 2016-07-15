@@ -10,7 +10,7 @@ import utilities.Validation;
 import org.junit.Test;
 import prob02.StaircaseStructure;
 
-public class StaircaseStructureTest {
+public class StaircaseStructureTest extends StaircaseStructure{
 
 	@Test
 	public void test() throws IOException {
@@ -21,7 +21,7 @@ public class StaircaseStructureTest {
 		
 		Integer nrOfLevels = ioData.readOneInt();
 
-		ArrayList<String> tree = StaircaseStructure.generateTreeList(nrOfLevels);
+		ArrayList<String> tree = generateTreeList(nrOfLevels);
 
 		ioData.writeArrayListToFileLineNew(tree);
 

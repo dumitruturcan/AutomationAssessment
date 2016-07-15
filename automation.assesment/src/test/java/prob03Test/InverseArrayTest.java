@@ -11,7 +11,7 @@ import prob03.InverseArray;
 import utilities.TestDataContext;
 import utilities.Validation;
 
-public class InverseArrayTest {
+public class InverseArrayTest extends InverseArray {
 
 	@Test
 	public void test() throws IOException {
@@ -24,7 +24,7 @@ public class InverseArrayTest {
 		
 		Double[] array = arrayList.toArray(new Double [arrayList.size()]);
 		
-		InverseArray.inverseArray(array);
+		inverseArray(array);
 		
 		ioData.writeArrayToFileInLine(array);
 	}

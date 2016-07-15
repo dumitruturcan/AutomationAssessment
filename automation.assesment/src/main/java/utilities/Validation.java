@@ -14,8 +14,7 @@ public class Validation {
 
 			return true;
 
-		else
-		{
+		else {
 			FileWriter write = new FileWriter(ioData.getOutputFile());
 			write.write("-1");
 			write.close();
@@ -23,4 +22,6 @@ public class Validation {
 		}
 	}
 
+	
+	
 }

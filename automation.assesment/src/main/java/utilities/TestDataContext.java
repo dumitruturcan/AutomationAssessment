@@ -88,7 +88,7 @@ public class TestDataContext {
 		return value;
 	}
 
-	public Object readLineArrayList() throws FileNotFoundException {
+	public ArrayList<String> readLineArrayList() throws FileNotFoundException {
 
 		ArrayList<String> temp = new ArrayList<String>();
 			
@@ -136,7 +136,7 @@ public class TestDataContext {
 		
 		return array;
 	}
-	
+
 	//***************************************************GETTERS****************************************************
 	
 	public File getInputFile(){
@@ -148,7 +148,6 @@ public class TestDataContext {
 	}
 
 	
-
 	//*************************************************FILE_UTILITIES************************************************
 	
 	
