@@ -22,7 +22,7 @@ public class MagicalSquareTest {
 
 		ArrayList<Integer> array = ioData.readIntegerArrayList();
 
-		assertTrue("Not a square",Math.sqrt(array.size())%1 == 0);
+		assertTrue("Not a square",Validation.isSquare(array.size()));
 		
 		Integer[][] square = MagicalSquare.arrayListTo2DSquareArray(array);
 	 	

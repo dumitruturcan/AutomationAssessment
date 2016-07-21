@@ -22,6 +22,13 @@ public class Validation {
 		}
 	}
 
-	
+	public static boolean isSquare(Integer n){
+		
+		if(Math.sqrt(n)%1 == 0)
+		
+			return true;
+		
+		return false;
+	}
 	
 }
