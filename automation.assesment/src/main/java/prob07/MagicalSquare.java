@@ -23,7 +23,8 @@ public class MagicalSquare {
 	public static boolean isMagicalSquare(Integer[][] square) {
 
 		int magicValue = sumPerMainDiagonal(square);
-		int[] rowSumsArray = null, colSumsArray;
+		int[] rowSumsArray = null;
+		int[] colSumsArray;
 		boolean result = false;
 
 		if (magicValue == sumPerSecondDiagonal(square))
@@ -43,7 +44,7 @@ public class MagicalSquare {
 		return result;
 	}
 
-	private static int[] sumsPerColumns(Integer[][] square) {
+	public static int[] sumsPerColumns(Integer[][] square) {
 
 		int[] results = new int[square.length];
 
@@ -56,7 +57,7 @@ public class MagicalSquare {
 
 	}
 
-	private static int sumPerSecondDiagonal(Integer[][] square) {
+	public static int sumPerSecondDiagonal(Integer[][] square) {
 
 		int sum = 0;
 		int j = square.length - 1;
@@ -68,7 +69,7 @@ public class MagicalSquare {
 		return sum;
 	}
 
-	private static int sumPerMainDiagonal(Integer[][] square) {
+	public static int sumPerMainDiagonal(Integer[][] square) {
 
 		int sum = 0;
 
@@ -79,7 +80,7 @@ public class MagicalSquare {
 		return sum;
 	}
 
-	private static int[] sumsPerRows(Integer[][] square) {
+	public static int[] sumsPerRows(Integer[][] square) {
 
 		int[] results = new int[square.length];
 
