@@ -1,0 +1,15 @@
+package prob16;
+
+import java.util.ArrayList;
+
+public class DoubleOrAdd {
+
+	public ArrayList<Integer> retunrNumberOfMovesList(ArrayList<Integer> inputValues) {
+		
+		
+		
+		
+		return null;
+	}
+
+}

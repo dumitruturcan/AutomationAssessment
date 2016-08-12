@@ -1,0 +1,55 @@
+package utilities;
+
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Validation {
+
+	TestDataContext ioData;
+	
+	public Validation(TestDataContext ioData) {
+		
+		
+	}
+
+	public static boolean fileNotEmpty(TestDataContext ioData) throws IOException {
+		@SuppressWarnings("resource")
+		Scanner scan = new Scanner(ioData.getInputFile());
+
+		if (scan.hasNextLine())
+
+			return true;
+
+		else {
+			
+			return false;
+		}
+	}
+
+	public static boolean isSquare(Integer n){
+		
+		if(Math.sqrt(n)%1 == 0)
+		
+			return true;
+		
+		return false;
+	}
+	
+	public static boolean isPare(Integer n){
+		
+		if (n % 2 == 0)
+		
+			return true;
+		
+		else return false;
+	}
+	
+	private void writeNegativeCaseToOutputFile(){
+		
+		FileWriter write = new FileWriter(ioData.getOutputFile());
+		write.write("-1");
+		write.close();
+		
+	}
+}

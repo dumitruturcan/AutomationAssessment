@@ -11,20 +11,20 @@ import utilities.Validation;
 public class OddSumEvenAmountTest {
 
 	@Test
-	public void test() throws IOException {
-	
+	public void OddEvenSol1() throws IOException {
+
 		TestDataContext ioData = new TestDataContext("05");
-		
-		assertTrue(Validation.fileNotEmpty(ioData));
-		
+		Validation validate = new Validation(ioData);
+		assertTrue("No data in input file", validate.fileNotEmpty(ioData));
+
 		ArrayList<Integer> array = ioData.readIntegerArrayList();
-		
+
 		int oddSum = OddSumEvenAmount.oddSum(array);
-		
+
 		int evenAmount = OddSumEvenAmount.evenAmount(array);
-		
-		ioData.writeLine("Sum of Odd Numbers = "+oddSum+ "\nAmount of Even Numbers = "+evenAmount);
-		
+
+		ioData.writeLine("Sum of Odd Numbers = " + oddSum + "\nAmount of Even Numbers = " + evenAmount);
+
 	}
 
 }

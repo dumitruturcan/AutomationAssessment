@@ -13,11 +13,11 @@ import prob02.StaircaseStructure;
 public class StaircaseStructureTest extends StaircaseStructure{
 
 	@Test
-	public void test() throws IOException {
+	public void StairCaseSol1() throws IOException {
 
 		TestDataContext ioData = new TestDataContext("02");
-
-		assertTrue("No data in input file",Validation.fileNotEmpty(ioData));
+		Validation validate = new Validation(ioData);
+		assertTrue("No data in input file",validate.fileNotEmpty(ioData));
 		
 		Integer nrOfLevels = ioData.readOneInt();
 

@@ -1,0 +1,74 @@
+package prob23;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
+public class AscendingArrayOfNumbers {
+
+	public ArrayList<Integer> result(ArrayList<Integer> arrayList) {
+
+		ArrayList<ArrayList<Integer>> possibleSequences = new ArrayList<ArrayList<Integer>>();
+		ArrayList<Integer> tempList = arrayList;
+
+		while (tempList.size() > 0) {
+
+			possibleSequences.add(returnMaxPossibleSequences(tempList));
+
+			tempList.remove(0);
+		}
+
+		return arrayList;
+	}
+
+	private ArrayList<Integer> returnMaxPossibleSequences(ArrayList<Integer> tempList) {
+
+		ArrayList<Integer> maxPossibleSequence = 
+		
+		
+		return null;
+	}
+
+	private ArrayList<Integer> removeElementsSmallerThenFirstElement(ArrayList<Integer> tempList) {
+
+		ArrayList<Integer> temp = new ArrayList<Integer>();
+
+		for (int i = 0; i < tempList.size(); i++)
+			if (tempList.get(i) >= tempList.get(0))
+
+				temp.add(tempList.get(i));
+
+		return temp;
+	}
+
+	private int[] countNrOfAppearencesFrom(ArrayList<Integer> tempList) {
+
+		int[] appearances = new int[maxElementFromList(tempList) + 1];
+
+		for (int i = 0; i < tempList.size(); i++)
+
+			appearances[tempList.get(i)]++;
+
+		return appearances;
+
+	}
+
+	private int maxElementFromList(ArrayList<Integer> tempList) {
+		int maxElement = tempList.get(0);
+
+		for (Integer value : tempList)
+
+			if (value > maxElement)
+
+				maxElement = value;
+
+		return maxElement;
+	}
+
+	private void printAppearances(int[] nrOfAppearances) {
+
+		for (int i = 0; i < nrOfAppearances.length; i++)
+			System.out.print(i + ":" + nrOfAppearances[i] + "  ");
+
+	}
+
+}

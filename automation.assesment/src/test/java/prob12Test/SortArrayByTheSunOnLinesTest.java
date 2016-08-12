@@ -14,15 +14,15 @@ import utilities.Validation;
 public class SortArrayByTheSunOnLinesTest {
 
 	@Test
-	public void test() throws IOException {
+	public void SortBySumOnLinesSol1() throws IOException {
 
 		TestDataContext ioData = new TestDataContext("12");
-
-		assertTrue("Input file has no data", Validation.fileNotEmpty(ioData));
+		Validation validate = new Validation(ioData);
+		assertTrue("No data in input file", validate.fileNotEmpty(ioData));
 
 		ArrayList<Integer> fileIntegers = ioData.readIntegerArrayList();
 
-		assertTrue(Validation.isSquare(fileIntegers.size()));
+		assertTrue(validate.isSquare(fileIntegers.size()));
 
 		Integer[][] array = MagicalSquare.arrayListTo2DSquareArray(fileIntegers);
 

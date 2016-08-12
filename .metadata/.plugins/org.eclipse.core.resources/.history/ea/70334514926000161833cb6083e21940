@@ -1,0 +1,28 @@
+package prob18Test;
+
+import static org.junit.Assert.*;
+import java.io.IOException;
+import java.util.ArrayList;
+import org.junit.Test;
+import prob18.HideNSeek;
+import utilities.TestDataContext;
+import utilities.Validation;
+
+public class HideNSeekTest extends HideNSeek {
+
+	@Test
+
+	public void test() throws IOException {
+
+		TestDataContext ioData = new TestDataContext("18");
+		Validation validate = new Validation(ioData);
+		assertTrue("No data in input file", validate.fileNotEmpty(ioData));
+
+		ArrayList<Integer> inputData = ioData.readIntegerArrayList();
+
+		assertTrue("The input file must contain pair nr of elements", validate.isPare(inputData.size()));
+
+		ioData.writeIntegerArrayListToFileLineNew(returnLastElementsList(inputData));
+	}
+
+}

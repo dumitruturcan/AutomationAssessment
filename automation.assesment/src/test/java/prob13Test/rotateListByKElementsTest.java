@@ -11,11 +11,11 @@ import utilities.Validation;
 public class rotateListByKElementsTest extends rotateListByKElements {
 
 	@Test
-	public void test() throws IOException {
+	public void rotateListSol1() throws IOException {
 
 		TestDataContext ioData = new TestDataContext("13");
-
-		assertTrue(Validation.fileNotEmpty(ioData));
+		Validation validate = new Validation(ioData);
+		assertTrue("No data in input file", validate.fileNotEmpty(ioData));
 
 		ArrayList<Integer> list = ioData.readIntegerArrayList();
 

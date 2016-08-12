@@ -1,0 +1,14 @@
+package prob16Test;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class DoubleOrAddTest {
+
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+
+}

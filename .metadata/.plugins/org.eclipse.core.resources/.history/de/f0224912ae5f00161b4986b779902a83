@@ -1,0 +1,16 @@
+package prob20;
+
+import java.util.ArrayList;
+
+public class NonAdjacentSequence {
+
+	
+	public ArrayList<String> result(){
+		
+		ArrayList<String> sequences = new ArrayList<String>();
+		
+		
+		
+	}
+	
+}

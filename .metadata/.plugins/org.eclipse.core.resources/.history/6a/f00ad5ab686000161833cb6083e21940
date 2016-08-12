@@ -1,0 +1,24 @@
+package prob15;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class TwoDimensinalArrayClockwise {
+
+	public  int extractNrOfRotations(ArrayList<String> list){
+		
+		Scanner scan = new Scanner(list.get(0));
+		
+		int nr = scan.nextInt();
+		
+		list.remove(0);
+		
+		return nr;
+	}
+	
+	public Integer[][] convertStringListTo2DArray(ArrayList<String> inputLines) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+}

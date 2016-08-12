@@ -1,0 +1,28 @@
+package prob14Test;
+
+import static org.junit.Assert.*;
+import java.io.IOException;
+import java.util.ArrayList;
+
+import org.junit.Test;
+import utilities.TestDataContext;
+import utilities.Validation;
+import prob14.Coins;
+
+public class CoinsTest extends Coins {
+
+	@Test
+	public void test() throws IOException {
+		
+		TestDataContext ioData = new TestDataContext("14");
+
+		assertTrue("Input file is empty",Validation.fileNotEmpty(ioData));
+		
+		ArrayList<Integer> ammount = ioData.readIntegerArrayList();
+		
+		//ioData.writeIntegerArrayListToFileLineNew(returnAmmountOfCoins(ammount));
+		System.out.println(returnAmmountOfCoins(ammount));
+		
+	}
+
+}

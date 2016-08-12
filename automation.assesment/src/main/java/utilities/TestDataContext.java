@@ -80,11 +80,30 @@ public class TestDataContext {
 			for (int j = 0; j < array[i].length; j++)
 
 				out.write(array[i][j] + " ");
-			
+
 			out.write("\n");
 		}
 
 		out.close();
+	}
+
+	public void write2DarrayList(ArrayList<ArrayList<Integer>> arrayList) throws IOException {
+
+		FileWriter write = new FileWriter(output);
+
+		for (int i = 0; i < arrayList.size(); i++) {
+			boolean written = false;
+			for (int j = 0; j < arrayList.get(i).size(); j++){
+
+				write.write(arrayList.get(i).get(j) + " ");
+				written = true;
+				
+			}
+			if(written)
+			write.write("\n");
+		}
+
+		write.close();
 	}
 
 	// ************************************************READ_METHODS*************************************************

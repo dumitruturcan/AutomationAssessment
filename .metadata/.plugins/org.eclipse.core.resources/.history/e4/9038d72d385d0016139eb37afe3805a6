@@ -1,0 +1,23 @@
+package prob23;
+
+import java.util.ArrayList;
+
+public class AscendingArrayOfNumbers {
+
+	public ArrayList<Integer> result (ArrayList<Integer> arrayList){
+		
+		ArrayList<Integer> tempList = arrayList;
+		
+		while (){
+			
+			
+			
+		}
+		
+		
+		
+		return arrayList;
+	}
+	
+	
+}

@@ -11,12 +11,11 @@ import utilities.Validation;
 public class PolindromeTest extends Polindrome {
 
 	@Test
-	public void test() throws IOException {
+	public void PolindromeSol1() throws IOException {
 		
 		TestDataContext ioData = new TestDataContext("01");
-
-		assertTrue("No data in input File",Validation.fileNotEmpty(ioData));
-		
+		Validation validate = new Validation(ioData);
+		assertTrue("No data in input File",validate.fileNotEmpty(ioData));
 		
 		ArrayList<String> arrayList = ioData.readLineArrayList();
 

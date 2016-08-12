@@ -12,11 +12,11 @@ import utilities.Validation;
 public class BubbleSortTest {
 
 	@Test
-	public void test() throws IOException {
+	public void BubbleSortSol1() throws IOException {
 
 		TestDataContext ioData = new TestDataContext("04");
-
-		assertTrue(Validation.fileNotEmpty(ioData));
+		Validation validate = new Validation(ioData);
+		assertTrue("No data in input file", validate.fileNotEmpty(ioData));
 
 		ArrayList<Integer> arrayList = (ArrayList<Integer>) ioData.readIntegerArrayList();
 

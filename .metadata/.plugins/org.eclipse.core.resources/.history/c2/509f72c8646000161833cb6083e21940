@@ -1,0 +1,20 @@
+package prob15Test;
+
+import static org.junit.Assert.*;
+import java.io.IOException;
+import org.junit.Test;
+import prob15.TwoDimensinalArrayClockwise;
+import utilities.TestDataContext;
+
+public class TwoDimensinalArrayClockwiseTest extends TwoDimensinalArrayClockwise {
+
+	@Test
+	public void test() throws IOException {
+		
+		
+		TestDataContext ioDataContext = new TestDataContext("15");
+		
+		
+	}
+
+}

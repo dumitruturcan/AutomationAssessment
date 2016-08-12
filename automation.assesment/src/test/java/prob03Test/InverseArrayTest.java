@@ -14,11 +14,11 @@ import utilities.Validation;
 public class InverseArrayTest extends InverseArray {
 
 	@Test
-	public void test() throws IOException {
+	public void InverseArraySol1() throws IOException {
 		
 		TestDataContext ioData = new TestDataContext("03");
-		
-		assertTrue(Validation.fileNotEmpty(ioData));
+		Validation validate = new Validation(ioData);
+		assertTrue("No data in input file",validate.fileNotEmpty(ioData));
 		
 		ArrayList<Double> arrayList = ioData.readDoubleArrayList();
 		

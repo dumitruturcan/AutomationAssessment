@@ -1,0 +1,172 @@
+package prob15;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class TwoDimensinalArrayClockwise {
+
+	public ArrayList<ArrayList<Integer>> rotateClokwise2DArrayList(ArrayList<ArrayList<Integer>> array,
+			int nrOfRotations) {
+
+		int section = nrOfRotations % 4;
+		int line = 0;
+		int row = 0;
+
+		array = buildASquare2DArrayList(array);
+
+		switch (section) {
+
+		case 0:
+			return array;
+
+		case 1: {
+			line = 0;
+			row = array.get(0).size() - 1;
+			array = oneRotation(line, row, array);
+			break;
+		}
+
+		case 2: {
+
+			line = array.get(array.size() - 1).size() - 1;
+			row = line;
+			array = twoRotations(line, row, array);
+			break;
+		}
+
+		case 3: {
+
+			line = array.get(array.size() - 1).size() - 1;
+			row = 0;
+			array = threeRotations(line, row, array);
+			break;
+		}
+
+		}
+
+		print(array);
+
+		return array;
+	}
+
+	private ArrayList<ArrayList<Integer>> oneRotation(int line, int row, ArrayList<ArrayList<Integer>> array) {
+
+		ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
+
+		for (int i = line; i < array.size(); i++) {
+
+			result.add(new ArrayList<Integer>());
+
+			for (int j = row; j >= 0; j--)
+
+				result.get(i).add(array.get(j).get(i));
+		}
+		return result;
+	}
+
+	private ArrayList<ArrayList<Integer>> twoRotations(int line, int row, ArrayList<ArrayList<Integer>> array) {
+
+		ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
+
+		for (int i = array.size() - 1; i >= 0; i--) {
+			result.add(new ArrayList<Integer>());
+			int k = result.size() - 1;
+			for (int j = array.size() - 1; j >= 0; j--)
+
+				result.get(k).add(array.get(i).get(j));
+
+		}
+		return result;
+	}
+
+	private ArrayList<ArrayList<Integer>> threeRotations(int line, int row, ArrayList<ArrayList<Integer>> array) {
+
+		ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
+
+		for (int i = line; i < array.size(); i++) {
+
+			result.add(new ArrayList<Integer>());
+
+			for (int j = row; j >= 0; j--)
+
+				result.get(i).add(array.get(i).get(j));
+		}
+		return result;
+	}
+
+	public int extractNrOfRotations(ArrayList<String> list) {
+
+		Scanner scan = new Scanner(list.get(0));
+
+		int nr = scan.nextInt();
+
+		scan.close();
+
+		list.remove(0);
+
+		return nr;
+	}
+
+	protected ArrayList<ArrayList<Integer>> convertStringListTo2DArray(ArrayList<String> inputLines) {
+
+		ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
+
+		Scanner scan = null;
+
+		for (int i = 0; i < inputLines.size(); i++) {
+
+			scan = new Scanner(inputLines.get(i));
+
+			result.add(new ArrayList<Integer>());
+
+			while (scan.hasNextInt()) {
+
+				result.get(i).add(scan.nextInt());
+
+			}
+		}
+		return result;
+	}
+
+	private ArrayList<ArrayList<Integer>> buildASquare2DArrayList(ArrayList<ArrayList<Integer>> array) {
+
+		int maxLength = 0;
+
+		for (int i = 0; i < array.size(); i++)
+
+			if (array.get(i).size() > maxLength)
+
+				maxLength = array.get(i).size();
+
+		if (maxLength != array.size()) {
+
+			int nrOfLinesToAdd = Math.abs(maxLength - array.size());
+
+			for (int i = 0; i < nrOfLinesToAdd; i++)
+
+				array.add(new ArrayList<Integer>());
+		}
+
+		for (int i = 0; i < array.size(); i++)
+			for (int j = array.get(i).size(); j < maxLength; j++)
+
+				array.get(i).add(null);
+
+		return array;
+	}
+
+	private void print(ArrayList<ArrayList<Integer>> array) {
+
+		for (int i = 0; i < array.size(); i++) {
+
+			for (int j = 0; j < array.size(); j++)
+
+				if (array.get(i).get(j) != null)
+
+					System.out.print(array.get(i).get(j) + " ");
+
+			System.out.println();
+		}
+
+	}
+}

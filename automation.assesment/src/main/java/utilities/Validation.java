@@ -6,7 +6,15 @@ import java.util.Scanner;
 
 public class Validation {
 
-	public static boolean fileNotEmpty(TestDataContext ioData) throws IOException {
+	private static TestDataContext ioDataContext;
+
+	public Validation(TestDataContext ioData) {
+
+		ioDataContext = ioData;
+
+	}
+
+	public boolean fileNotEmpty(TestDataContext ioData) throws IOException {
 		@SuppressWarnings("resource")
 		Scanner scan = new Scanner(ioData.getInputFile());
 
@@ -15,20 +23,55 @@ public class Validation {
 			return true;
 
 		else {
-			FileWriter write = new FileWriter(ioData.getOutputFile());
-			write.write("-1");
-			write.close();
+			writeNegativeCaseToOutputFile();
 			return false;
 		}
 	}
 
-	public static boolean isSquare(Integer n){
-		
-		if(Math.sqrt(n)%1 == 0)
-		
+	public boolean isSquare(Integer n) throws IOException {
+
+		if (Math.sqrt(n) % 1 == 0)
+
 			return true;
-		
+
+		else
+
+			writeNegativeCaseToOutputFile();
+
 		return false;
 	}
-	
+
+	public boolean isPare(Integer n) throws IOException {
+
+		if (n % 2 == 0)
+
+			return true;
+
+		else
+
+			writeNegativeCaseToOutputFile();
+
+		return false;
+	}
+
+	public boolean isGratherThen(int n, int k) throws IOException {
+
+		if (n > k)
+
+			return true;
+
+		else
+
+			writeNegativeCaseToOutputFile();
+
+		return false;
+	}
+
+	private void writeNegativeCaseToOutputFile() throws IOException {
+
+		FileWriter write = new FileWriter(ioDataContext.getOutputFile());
+		write.write("-1");
+		write.close();
+
+	}
 }

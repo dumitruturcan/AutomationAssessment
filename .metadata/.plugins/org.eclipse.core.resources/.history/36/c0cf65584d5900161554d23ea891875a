@@ -1,0 +1,41 @@
+package prob23;
+
+import java.util.ArrayList;
+
+public class AscendingArrayOfNumbers {
+
+	
+	
+	public static ArrayList<Integer> result(ArrayList<Integer> arrayList) {
+
+		ArrayList<ArrayList<Integer>> possibleSequences = new ArrayList<ArrayList<Integer>>();
+		ArrayList<Integer> temp = new ArrayList<Integer>();
+		Integer[] nrOfAppearancesOfEachNumber = determineMaxFromArrayList(arrayList);
+
+		int index = 0;
+
+		while (index < arrayList.size()) {
+
+		}
+
+		return null;
+	}
+
+	private static Integer[] determineMaxFromArrayList(ArrayList<Integer> arrayList) {
+		
+		int max = arrayList.get(0);
+		
+		for (int i = 1 ; i < arrayList.size(); i ++)
+			
+			if (arrayList.get(i) > max)
+				
+				max = arrayList.get(i);
+		
+		
+		
+		
+		
+		return null;
+	}
+
+}

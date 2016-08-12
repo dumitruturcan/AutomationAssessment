@@ -13,12 +13,12 @@ import utilities.Validation;
 public class FriendlyNumbersTest {
 
 	@Test
-	public void test() throws IOException {
+	public void FriendlyNumbersSol1() throws IOException {
 
 		TestDataContext ioData = new TestDataContext("09");
+		Validation validate = new Validation(ioData);
+		assertTrue("No data in input file", validate.fileNotEmpty(ioData));
 
-		assertTrue("No data in input file", Validation.fileNotEmpty(ioData));
-		
 		int limit = ioData.readOneInt();
 
 		ArrayList<String> friendlyPairNumbers = FriendlyNumbers.returnFriendlyPairs(limit);

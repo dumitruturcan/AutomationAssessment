@@ -11,21 +11,20 @@ import utilities.Validation;
 public class PrimeNumbersTest {
 
 	@Test
-	public void test() throws IOException {
-		
+	public void PrimeNumbersSol1() throws IOException {
+
 		TestDataContext ioData = new TestDataContext("08");
-		
-		assertTrue("File has no data !",Validation.fileNotEmpty(ioData));
-		
-		int n =ioData.readOneInt();
-		
+		Validation validate = new Validation(ioData);
+		assertTrue("No data in input file", validate.fileNotEmpty(ioData));
+
+		int n = ioData.readOneInt();
+
 		ArrayList<Integer> primeArray = new ArrayList<Integer>();
-		
+
 		primeArray = PrimeNumbers.returnPrimeNumbersArrayUntilN(n);
-		
+
 		ioData.writeArrayToFileInLine(primeArray.toArray(new Integer[primeArray.size()]));
-		
-		
+
 	}
 
 }

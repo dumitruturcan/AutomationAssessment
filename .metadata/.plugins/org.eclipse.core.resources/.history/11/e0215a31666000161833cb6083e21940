@@ -1,0 +1,29 @@
+package prob15Test;
+
+import static org.junit.Assert.*;
+import java.io.IOException;
+import java.util.ArrayList;
+
+import org.junit.Test;
+import prob15.TwoDimensinalArrayClockwise;
+import utilities.TestDataContext;
+import utilities.Validation;
+
+public class TwoDimensinalArrayClockwiseTest extends TwoDimensinalArrayClockwise {
+
+	@Test
+	public void test() throws IOException {
+		
+		
+		TestDataContext ioData = new TestDataContext("15");
+		
+		assertTrue("Input file has no data",Validation.fileNotEmpty(ioData));
+		
+		ArrayList<String> inputLines = ioData.readLineArrayList();
+		int nrOfRotations = extractNrOfRotations(inputLines);
+		System.out.println(nr);
+		//Integer[][] array = convertStringListT 
+			
+	}
+
+}

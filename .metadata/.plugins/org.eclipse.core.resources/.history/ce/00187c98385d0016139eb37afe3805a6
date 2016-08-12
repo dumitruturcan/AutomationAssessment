@@ -1,0 +1,28 @@
+package prob23;
+
+import java.util.ArrayList;
+
+public class AscendingArrayOfNumbers {
+
+	public ArrayList<Integer> result(ArrayList<Integer> arrayList) {
+
+		ArrayList<Integer> tempList = arrayList;
+		int [] nrOfAppearences ;
+
+		while (tempList.size() > 0) {
+			
+			nrOfAppearences = countNrOfAppearencesFrom(tempList);
+			
+			tempList.remove(0);
+			
+		}
+
+		return arrayList;
+	}
+
+	private int[] countNrOfAppearencesFrom(ArrayList<Integer> tempList) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

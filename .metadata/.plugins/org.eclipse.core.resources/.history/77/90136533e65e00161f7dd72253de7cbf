@@ -1,0 +1,23 @@
+package prob16Test;
+
+import static org.junit.Assert.*;
+import java.io.IOException;
+import java.util.ArrayList;
+
+import org.junit.Test;
+import utilities.TestDataContext;
+import utilities.Validation;
+
+public class DoubleOrAddTest {
+
+	@Test
+	public void test() throws IOException {
+		
+		TestDataContext ioData = new TestDataContext("16");
+		
+		assertTrue(Validation.fileNotEmpty(ioData));
+		
+		ArrayList<Integer> inputValues = ioData.readIntegerArrayList();
+	}
+
+}

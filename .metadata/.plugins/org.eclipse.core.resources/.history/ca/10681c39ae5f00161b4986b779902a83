@@ -1,0 +1,29 @@
+package prob20;
+
+import java.util.ArrayList;
+
+public class NonAdjacentSequence {
+
+	
+	public ArrayList<String> result(ArrayList<Integer> inputData){
+		
+		ArrayList<String> sequences = new ArrayList<String>();
+		
+		for(Integer value : inputData)
+			
+			sequences.add(generateSequence(value));
+		
+		
+		return sequences;
+	}
+
+	private String generateSequence(Integer value) {
+		
+		ArrayList<Integer> list = populateListWith(1,value);
+		
+		
+		
+		return null;
+	}
+	
+}

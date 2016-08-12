@@ -10,23 +10,21 @@ public class LeapYears {
 		ArrayList<Integer> leapYearsList = new ArrayList<Integer>();
 		int year = LocalDate.now().getYear() + 1;
 
-		System.out.println(nrOfLeapYears);
-		
-		while (nrOfLeapYears > 0){
-		
-			if(isLeapYear(year)){
-				
-				nrOfLeapYears --;	
-				
+		while (nrOfLeapYears > 0) {
+
+			if (isLeapYear(year)) {
+
+				nrOfLeapYears--;
+
 				leapYearsList.add(year);
-				
+
 				year++;
-				
+
 			} else
-				
+
 				year++;
 		}
-		
+
 		return leapYearsList;
 	}
 

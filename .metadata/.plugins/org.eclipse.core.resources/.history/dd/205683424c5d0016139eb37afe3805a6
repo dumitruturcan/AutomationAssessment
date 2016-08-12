@@ -1,0 +1,108 @@
+package prob23;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
+public class AscendingArrayOfNumbers {
+
+	public ArrayList<Integer> result(ArrayList<Integer> arrayList) {
+
+		ArrayList<ArrayList<Integer>> possibleSequences = new ArrayList<ArrayList<Integer>>();
+		ArrayList<Integer> tempList = arrayList;
+		int[] appearances = countNrOfAppearencesFrom(arrayList);
+
+		while (tempList.size() > 1) {
+
+			for (int i = 0; i < appearances.length; i++) {
+
+				if (appearances[i] > 0) {
+
+					tempList = removeElementsSmallerThenN(i, tempList);
+					
+					possibleSequences.add(maxPossibleSequenceFromList(i,tempList));
+					
+					tempList = removeElementsEqualToN(i, tempList);
+
+				}
+			}
+
+		}
+
+		return arrayList;
+	}
+
+	private ArrayList<Integer> maxPossibleSequenceFromList(int element, ArrayList<Integer> arrayList) {
+		
+		ArrayList<ArrayList<Integer>> possibleSequences = new ArrayList<ArrayList<Integer>>();
+		ArrayList<Integer> temp = arrayList;
+		
+		temp = removeElementsUntilFirstAparitionOfN(element,arrayList);
+		
+		return null;
+	}
+
+	
+	private ArrayList<Integer> removeElementsUntilFirstAparitionOfN(int element, ArrayList<Integer> arrayList) {
+		
+		ArrayList<Integer> temp = new ArrayList<Integer>();
+		
+		
+		return null;
+	}
+
+	private ArrayList<Integer> removeElementsSmallerThenN(int n, ArrayList<Integer> tempList) {
+
+		ArrayList<Integer> temp = new ArrayList<Integer>();
+
+		for (int i = 0; i < tempList.size(); i++)
+			if (tempList.get(i) >= n)
+
+				temp.add(tempList.get(i));
+
+		return temp;
+	}
+
+	private ArrayList<Integer> removeElementsEqualToN(int n, ArrayList<Integer> tempList) {
+
+		ArrayList<Integer> temp = new ArrayList<Integer>();
+
+		for (int i = 0; i < tempList.size(); i++)
+			if (tempList.get(i) != n)
+
+				temp.add(tempList.get(i));
+
+		return temp;
+	}
+
+	private int[] countNrOfAppearencesFrom(ArrayList<Integer> tempList) {
+
+		int[] appearances = new int[maxElementFromList(tempList) + 1];
+
+		for (int i = 0; i < tempList.size(); i++)
+
+			appearances[tempList.get(i)]++;
+
+		return appearances;
+
+	}
+
+	private int maxElementFromList(ArrayList<Integer> tempList) {
+		int maxElement = tempList.get(0);
+
+		for (Integer value : tempList)
+
+			if (value > maxElement)
+
+				maxElement = value;
+
+		return maxElement;
+	}
+
+	private void printAppearances(int[] nrOfAppearances) {
+
+		for (int i = 0; i < nrOfAppearances.length; i++)
+			System.out.print(i + ":" + nrOfAppearances[i] + "  ");
+
+	}
+
+}

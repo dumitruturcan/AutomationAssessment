@@ -1,0 +1,12 @@
+package prob23;
+
+import java.util.ArrayList;
+
+public class AscendingArrayOfNumbers {
+
+	public ArrayList<Integer> result (ArrayList<Integer>){
+		
+	}
+	
+	
+}

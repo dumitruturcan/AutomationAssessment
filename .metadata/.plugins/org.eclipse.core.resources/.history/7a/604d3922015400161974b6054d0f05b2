@@ -1,0 +1,38 @@
+package prob20;
+
+import java.util.ArrayList;
+
+public class HideNSeek {
+
+	public static ArrayList<String> returnLastElement(int n, int step) {
+
+		ArrayList<String> list = new ArrayList<String>();
+
+		for (int i = 1; i < n + 1; i++)
+			list.add(i+"");
+
+		int index = 0;
+
+		step -= 1;
+
+		while (list.size() > 1) {
+
+			if (list.size() > index + step) {
+
+				index += step;
+
+				list.remove(index);
+
+			} else {
+
+				index = step - (list.size() - index);
+
+				list.remove(index % list.size());
+				System.out.println(list);
+			}
+
+		}
+		return list;
+	}
+
+}

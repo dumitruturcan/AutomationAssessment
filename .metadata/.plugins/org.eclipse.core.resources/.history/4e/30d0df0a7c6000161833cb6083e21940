@@ -1,0 +1,110 @@
+package prob15;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class TwoDimensinalArrayClockwise {
+
+	public ArrayList<ArrayList<Integer>> rotateClokwise2DArrayList(ArrayList<ArrayList<Integer>> array,
+			int nrOfRotations) {
+
+		int section = nrOfRotations % 4;
+		int line = 0;
+		int row = 0;
+
+		switch (section) {
+
+		case 0:
+			return array;
+
+		case 1: {
+			line = 0;
+			row = array.get(0).size() - 1;
+			array = firstDial(line, row, array);
+			break;
+		}
+
+		case 2: {
+
+			line = array.get(array.size() - 1).size() - 1;
+			row = line;
+			break;
+		}
+
+		case 3: {
+
+			line = array.get(array.size() - 1).size() - 1;
+			row = 0;
+			break;
+		}
+
+		}
+
+		return array;
+	}
+
+	private ArrayList<ArrayList<Integer>> firstDial(int line, int row, ArrayList<ArrayList<Integer>> array) {
+
+		ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
+
+		for (int i = row; i >= 0; i--) {
+			for (int j = line; j>= array.size() ; j++)
+
+				System.out.print(j + "" + i + " ");
+			
+			System.out.println();
+		}
+
+		return result;
+	}
+
+	private ArrayList<ArrayList<Integer>> generateRotatedArray(int line, int row, ArrayList<ArrayList<Integer>> array) {
+
+		ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
+
+		for (int i = line; i < array.size(); i++) {
+
+			for (int j = row; j > 0; j--)
+
+				System.out.print(line + "" + row + " ");
+
+			System.out.println("line");
+		}
+		return result;
+	}
+
+	public int extractNrOfRotations(ArrayList<String> list) {
+
+		Scanner scan = new Scanner(list.get(0));
+
+		int nr = scan.nextInt();
+
+		scan.close();
+
+		list.remove(0);
+
+		return nr;
+	}
+
+	public ArrayList<ArrayList<Integer>> convertStringListTo2DArray(ArrayList<String> inputLines) {
+
+		ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
+
+		Scanner scan = null;
+
+		for (int i = 0; i < inputLines.size(); i++) {
+
+			scan = new Scanner(inputLines.get(i));
+
+			result.add(new ArrayList<Integer>());
+
+			while (scan.hasNextInt()) {
+
+				result.get(i).add(scan.nextInt());
+
+			}
+		}
+		return result;
+	}
+
+}

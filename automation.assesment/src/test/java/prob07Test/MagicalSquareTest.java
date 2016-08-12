@@ -14,15 +14,15 @@ import utilities.Validation;
 public class MagicalSquareTest {
 
 	@Test
-	public void test() throws IOException {
+	public void MagicalSquareSol1() throws IOException {
 
 		TestDataContext ioData = new TestDataContext("07");
-
-		assertTrue("Input.txt has no data",Validation.fileNotEmpty(ioData));
+		Validation validate = new Validation(ioData);
+		assertTrue("No data in input file", validate.fileNotEmpty(ioData));
 
 		ArrayList<Integer> array = ioData.readIntegerArrayList();
 
-		assertTrue("Not a square",Validation.isSquare(array.size()));
+		assertTrue("Not a square",validate.isSquare(array.size()));
 		
 		Integer[][] square = MagicalSquare.arrayListTo2DSquareArray(array);
 	 	

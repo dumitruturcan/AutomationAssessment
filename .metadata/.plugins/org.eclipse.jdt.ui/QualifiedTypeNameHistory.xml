@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.lang.Math"/>
+<fullyQualifiedTypeName name="java.lang.Double"/>
+<fullyQualifiedTypeName name="prob06.PIDigits"/>
+<fullyQualifiedTypeName name="prob9Test.FriendlyNumbersTest"/>
+<fullyQualifiedTypeName name="prob09.FriendlyNumbers"/>
+<fullyQualifiedTypeName name="java.time.LocalDate"/>
+<fullyQualifiedTypeName name="prob10.LeapYears"/>
+<fullyQualifiedTypeName name="java.io.IOException"/>
+<fullyQualifiedTypeName name="prob11.MergeThreeAscendinglySortedArrays"/>
+<fullyQualifiedTypeName name="prob02.StaircaseStructure"/>
+<fullyQualifiedTypeName name="prob03.InverseArray"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="prob13.rotateListByKElements"/>
+<fullyQualifiedTypeName name="javax.print.attribute.standard.RequestingUserName"/>
+<fullyQualifiedTypeName name="prob14.Coins"/>
+<fullyQualifiedTypeName name="prob23.AscendingArrayOfNumbers"/>
+<fullyQualifiedTypeName name="prob20Test.HideNSeekTest"/>
+<fullyQualifiedTypeName name="prob20.HideNSeek"/>
+<fullyQualifiedTypeName name="prob12Test.SortArrayByTheSunOnLinesTest"/>
+<fullyQualifiedTypeName name="prob12.SortArrayByTheSunOnLines"/>
+<fullyQualifiedTypeName name="prob07.MagicalSquare"/>
+<fullyQualifiedTypeName name="java.awt.List"/>
+<fullyQualifiedTypeName name="java.lang.NegativeArraySizeException"/>
+<fullyQualifiedTypeName name="prob04.BubbleSort"/>
+<fullyQualifiedTypeName name="java.lang.reflect.Array"/>
+<fullyQualifiedTypeName name="java.io.FileWriter"/>
+<fullyQualifiedTypeName name="prob16.DoubleOrAdd"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="utilities.TestDataContext"/>
+<fullyQualifiedTypeName name="utilities.Validation"/>
+<fullyQualifiedTypeName name="prob20.nonAdjacentSequence"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+</qualifiedTypeNameHistroy>

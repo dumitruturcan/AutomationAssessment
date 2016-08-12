@@ -1,0 +1,28 @@
+package prob20Test;
+
+import static org.junit.Assert.*;
+
+import java.io.IOException;
+import java.util.ArrayList;
+
+import org.junit.Test;
+
+import prob20.NonAdjacentSequence;
+import utilities.TestDataContext;
+import utilities.Validation;
+
+public class NonAdjacentSequenceTest extends NonAdjacentSequence {
+
+	@Test
+	public void test() throws IOException {
+		
+		TestDataContext ioData = new TestDataContext("20");
+		
+		assertTrue(Validation.fileNotEmpty(ioData));
+		
+		ArrayList<Integer> inputData = ioData.readIntegerArrayList();
+		
+		
+	}
+
+}

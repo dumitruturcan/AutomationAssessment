@@ -13,11 +13,11 @@ import utilities.Validation;
 public class LeapYearsTest  {
 
 	@Test
-	public void test() throws IOException {
+	public void LeapYearsSol1() throws IOException {
 		
 		TestDataContext ioData = new TestDataContext("10");
-		
-		assertTrue(Validation.fileNotEmpty(ioData));
+		Validation validate = new Validation(ioData);
+		assertTrue("No data in input file", validate.fileNotEmpty(ioData));
 		
 		int nrOfLeapYears = ioData.readOneInt();
 		

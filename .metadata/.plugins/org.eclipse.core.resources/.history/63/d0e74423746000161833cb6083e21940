@@ -1,0 +1,100 @@
+package prob15;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class TwoDimensinalArrayClockwise {
+
+	public ArrayList<ArrayList<Integer>> rotateClokwise2DArrayList(ArrayList<ArrayList<Integer>> array,
+			int nrOfRotations) {
+
+		int section = nrOfRotations % array.size();
+		int line = 0;
+		int row = 0;
+
+		switch (section) {
+
+		case 0:
+			return array;
+
+		case 1: {
+			line = 0;
+			row = array.get(0).size() - 1;
+			break;
+		}
+
+		case 2: {
+
+			line = array.get(array.size() - 1).size() - 1;
+			row = line;
+			break;
+		}
+
+		case 3: {
+
+			line = array.get(array.size() - 1).size() - 1;
+			row = 0;
+			break;
+		}
+
+		}
+
+		return generateRotatedArray(line, row, array);
+	}
+
+	private ArrayList<ArrayList<Integer>> generateRotatedArray(int line, int row, ArrayList<ArrayList<Integer>> array) {
+
+		ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
+
+		for (int i = line; i > array.get(line).size(); i--) {
+
+			result.add(new ArrayList<Integer>());
+
+			for (int j = 0; j < array.size(); j--) {
+
+				result.get(Math.abs(i)).add(array.get(0).get(0));
+				
+			}
+
+		}
+
+		
+		
+		return result;
+	}
+
+	public int extractNrOfRotations(ArrayList<String> list) {
+
+		Scanner scan = new Scanner(list.get(0));
+
+		int nr = scan.nextInt();
+
+		scan.close();
+
+		list.remove(0);
+
+		return nr;
+	}
+
+	public ArrayList<ArrayList<Integer>> convertStringListTo2DArray(ArrayList<String> inputLines) {
+
+		ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
+
+		Scanner scan = null;
+
+		for (int i = 0; i < inputLines.size(); i++) {
+
+			scan = new Scanner(inputLines.get(i));
+
+			result.add(new ArrayList<Integer>());
+
+			while (scan.hasNextInt()) {
+
+				result.get(i).add(scan.nextInt());
+
+			}
+		}
+		return result;
+	}
+
+}

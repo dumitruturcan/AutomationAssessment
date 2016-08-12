@@ -12,17 +12,16 @@ import prob14.Coins;
 public class CoinsTest extends Coins {
 
 	@Test
-	public void test() throws IOException {
+	public void CoinsSol1() throws IOException {
 
 		TestDataContext ioData = new TestDataContext("14");
+		Validation validate = new Validation(ioData);
+		assertTrue("No data in input file", validate.fileNotEmpty(ioData));
 
-		assertTrue(Validation.fileNotEmpty(ioData));
-		
-		ArrayList<Integer> ammount = ioData.readIntegerArrayList();
-		
-		ioData.writeArrayListToFileLineNew(returnAmmountOfCoins(ammount));
-		
-		
+		ArrayList<Integer> ammountList = ioData.readIntegerArrayList();
+
+		ioData.writeIntegerArrayListToFileLineNew(returnAmmountOfCoins(ammountList));
+
 	}
 
 }

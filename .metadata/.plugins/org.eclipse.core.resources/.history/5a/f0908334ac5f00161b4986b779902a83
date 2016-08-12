@@ -1,0 +1,14 @@
+package prob20Test;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class nonAdjacentSequenceTest {
+
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+
+}

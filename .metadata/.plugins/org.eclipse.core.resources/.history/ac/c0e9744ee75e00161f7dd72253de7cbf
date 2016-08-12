@@ -1,0 +1,28 @@
+package prob16;
+
+import java.util.ArrayList;
+
+public class DoubleOrAdd {
+
+	public ArrayList<Integer> retunrNumberOfMovesList(ArrayList<Integer> values) {
+
+		int initialListSize = values.size();
+
+		for (int i = 0; i < initialListSize; i++){
+
+			if (values.get(0) > 0)
+
+				values.add(returnNrOfMoves(values.get(0)));
+			
+			values.remove(0);
+		
+		}
+		return null;
+	}
+
+	private Integer returnNrOfMoves(Integer integer) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
